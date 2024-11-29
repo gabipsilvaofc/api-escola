@@ -1,0 +1,93 @@
+Desenvolva esta API com base na estrutura abaixo:
+
+Dependências: 
+npm install express mongoose dotenv cors
+npm install --save-dev nodemon
+
+Para rodar (npm run dev)
+
+
+Atualize o package.json para configurar scripts:
+
+
+{
+  "name": "api-alunos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
+api-escola/
+│
+├-------   src/
+│   
+
+├-------    models/          # Modelos do banco de dados
+│   │   ├-------    Aluno.js
+│   │   ├-------    Professor.js
+│   │   ├-------  Curso.js
+│   │   ├-------   Disciplina.js
+│   │   ├-------    Turma.js
+│   │  └── Sala.js
+│   │
+│ 
+
+├-------    controllers/     # Controladores (lógica das rotas)
+│   │   
+
+├-------    alunoController.js
+│   │   
+
+├-------   professorController.js
+│   │   
+
+├-------   cursoController.js
+│   │   
+
+├-------   disciplinaController.js
+│   │   └── turmaController.js
+│   │
+│   ├-------   routes/          # Rotas de cada entidade
+│   │   ├-------   alunoRoutes.js
+│   │   ├-------   professorRoutes.js
+│   │   ├-------  cursoRoutes.js
+│   │  
+├-------  disciplinaRoutes.js
+│   │   └── turmaRoutes.js
+│   │
+│  
+
+├-------    config/          # Configuração do banco de dados
+│   │   └── db.js
+│   │
+│   └── index.js         # Ponto de entrada do servidor
+│
+├-------    package.json         # Configuração do Node.js
+├-------   .env                 # Variáveis de ambiente
+└── README.md            # Documentação
+
+O MVC é um padrão de arquitetura que organiza o código em três camadas principais::
+Responsável por interagir com o banco de dados.
+Define a estrutura dos dados e as regras de negócio.
+Representado pelos schemas no MongoDB.
+Responsável pela interface com o usuário.
+Métodos da Controller para implementar:
+Listar
+Criar
+Atualizar
+Remover
